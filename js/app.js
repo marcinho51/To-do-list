@@ -19,7 +19,15 @@ var numberOfTasksLeft = 0;
 addButton.addEventListener("click", function() {
 
 
-    if (taskInput.value.length > 5 && taskInput.value.length < 100 && newInput.value > 0 && newInput.value < 11) {
+    if (taskInput.value.length <= 5) {
+        alert("Your task's name is too short")
+    } else if (taskInput.value.length > 99) {
+        alert("Your task's name is too long")
+    } else if (newInput.value > 10) {
+        alert("Task's value must be from 1 to 10")
+    } else if (newInput.value.length > 1) {
+        alert("Task's value must be from 1 to 10")
+    } else if (taskInput.value.length > 5 && taskInput.value.length < 100 && newInput.value > 0 && newInput.value < 11) {
         numberOfTasksLeft++
 
         // New Li element
