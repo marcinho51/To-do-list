@@ -1,23 +1,11 @@
-<img alt="Logo" src="http://coderslab.pl/svg/logo-coderslab.svg" width="400">
+# To Do List
 
-# JavaScript &ndash; warsztaty
-## ToDO
+This is "To Do List".
 
-Napisz listę zadań do zrobienia. Strona ma spełniać następujące założenia:
+1. After typing text and pressing ```Add task``` button, new task will be added to the list. Then, if you complete your task, you can press ```Complete``` button or, if you don't want to finish that task, ```Delete``` button. You can also set a priority level (from 1 to 10) on each task. Tasks with the higher priority level will be shown at the top of the list
+2. After pressing ```Complete``` button, tasks's text color will become red. After clicking that button again, it's colour will be default (what means, that task isn't completed).
+3. When you press ```Delete``` button, task will be removed from the list.
+4. By pressing ```Remove finished tasks button```, all completed tasks will be removed from the list.
+5. Task can be added only if it's length is higher than 5 and lower than 100 characters.
+6. Above the list, there's counter, that shows how many tasks left to do there are still on the list.
 
-1. Po wpisaniu zadania i naciśnięciu guzika ```Add task``` do listy ma zostać dodane nowe zadanie (z wpisaną odpowiednią treścią). Jednocześnie ma się wyświetlić guzik służący do oznaczenia tego zadania jako zrobione oraz guzikiem służący do usunięcia tego zadania (przykładowe zadanie jest zakomentowane w HTML).
-2. Po naciśnięciu na guzik ```Complete``` treść zadania ma się zmienić na kolor czerwony (jeżeli zadanie jest zrobione). Po ponownym naciśnieciu zadanie wraca do koloru domyślnego (czyli oznaczającego zadanie niezrobione).
-3. Po naciśnieciu guzika ```Delete``` zadanie ma zniknąć z listy.
-4. Po naciśnięciu guzika ```Remove finished tasks``` wszystkie zrobione zadania mają zniknąć z listy.
-5. Zadanie może być dodane tylko gdy jego treść ma więcej niż pięć, a mniej niż sto znaków.
-6. Po dodaniu zadania wartość inputa ma się zerować.
-7. Ponad listą ma się znajdować licznik pokazujący, ile zadań zostało nam do zrobienia.
-
-### Dla chętnych (z gwiazdką):
-Dodaj do strony drugi **input**, w którym będzie można wpisać priorytet zadania (liczba całkowita od **1** do **10**).
-Podczas dodawania zadania musi być ono dodane w odpowiednie miejsce na liście (zadania z priorytetem **10** na samej górze, zadania z priorytetem **0** na samym dole listy).
-
-
-##Pamiętaj:
-Zaplanuj wcześniej swoją pracę i rozpisz ją na etapy (podobnie jak w poprzednich zadaniach).
-Nie rób wszystkiego na raz!
