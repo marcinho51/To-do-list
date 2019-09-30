@@ -1,0 +1,121 @@
+@media (max-width: 768px) {
+    section {
+        div {
+            background-color: $mainColor;
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            input {
+                height: 1.5rem;
+                text-align: center;
+                width: 9rem;
+                &:nth-of-type(2) {
+                    height: 1.5rem;
+                    margin-bottom: 1.5rem;
+                    width: 9rem;
+                }
+            }
+            #addTaskButton {}
+            #taskList {
+                li {}
+            }
+            #removeFinishedTasksButton {}
+        }
+    }
+}
+
+@media (min-width: 769px) {
+    section {
+        div {
+            background-color: $mainColor;
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            h1 {
+                color: $colorWhite;
+                font-size: 2rem;
+                font-weight: 700;
+                text-transform: uppercase;
+            }
+            input {
+                border-radius: $borderRadius;
+                color: $mainColor;
+                height: 2.2rem;
+                text-align: center;
+                width: 15rem;
+                &::placeholder {
+                    color: $mainColor;
+                }
+                &:hover {
+                    border: 1px solid $colorGreen;
+                    font-weight: 700;
+                }
+                &:nth-of-type(2) {
+                    margin-bottom: 2rem;
+                    width: 7rem;
+                }
+            }
+            #addTaskButton {
+                background-color: $colorWhite;
+                border: 1px solid transparent;
+                border-radius: $borderRadius;
+                color: $mainColor;
+                font-weight: 700;
+                height: 2rem;
+                width: 6rem;
+                &:hover {
+                    background-color: $mainColor;
+                    border: 2px solid $colorWhite;
+                    color: $colorWhite;
+                }
+            }
+            #taskList {
+                display: flex;
+                flex-direction: column;
+                li {
+                    color: $colorWhite;
+                    font-size: 1rem;
+                    list-style-type: none;
+                    button {
+                        background-color: $colorWhite;
+                        border: 1px solid transparent;
+                        border-radius: $borderRadius;
+                        color: $mainColor;
+                        font-weight: 700;
+                        height: 1.5rem;
+                        margin-right: 0.25rem;
+                        width: 5rem;
+                        &:hover {
+                            background-color: $mainColor;
+                            border: 2px solid $colorWhite;
+                            color: $colorWhite;
+                        }
+                        &:last-of-type {
+                            margin-right: 2.5rem;
+                        }
+                    }
+                }
+            }
+            #removeFinishedTasksButton {
+                background-color: $colorWhite;
+                border: 1px solid transparent;
+                border-radius: $borderRadius;
+                color: $mainColor;
+                font-weight: 700;
+                height: 2rem;
+                width: 11rem;
+                &:hover {
+                    background-color: $mainColor;
+                    border: 2px solid $colorWhite;
+                    color: $colorWhite;
+                }
+            }
+        }
+    }
+}
