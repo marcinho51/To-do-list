@@ -13,7 +13,7 @@ newInput.type = "number";
 
 // Number of tasks left counter
 
-const numberOfTasksLeft = 0;
+let numberOfTasksLeft = 0;
 
 // Add Task Button
 
