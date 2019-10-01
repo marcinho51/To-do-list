@@ -2,12 +2,12 @@ const taskInput = document.querySelector("#taskInput");
 const addButton = document.querySelector("#addTaskButton");
 const removeButton = document.querySelector("#removeFinishedTasksButton");
 const list = document.querySelector("#taskList");
-const div = document.querySelector("div");
+const mainDiv = document.querySelector(".main");
 const newP = document.createElement("p");
 
-div.insertBefore(newP, list);
+mainDiv.insertBefore(newP, list);
 const newInput = document.createElement("input");
-div.insertBefore(newInput, addButton);
+mainDiv.insertBefore(newInput, addButton);
 newInput.placeholder = "Priority level";
 newInput.type = "number";
 
@@ -22,13 +22,13 @@ addButton.addEventListener("click", function() {
 
     if (taskInput.value.length <= 5) {
         alert("Your task's name is too short")
-    } else if (taskInput.value.length > 99) {
+    } else if (taskInput.value.length > 50) {
         alert("Your task's name is too long")
     } else if (newInput.value > 10) {
         alert("Task's value must be from 1 to 10")
     } else if (newInput.value.length < 1) {
         alert("Task's value must be from 1 to 10")
-    } else if (taskInput.value.length > 5 && taskInput.value.length < 100 && newInput.value > 0 && newInput.value < 11) {
+    } else if (taskInput.value.length > 5 && taskInput.value.length < 50 && newInput.value > 0 && newInput.value < 11) {
         numberOfTasksLeft++
 
         // New Li element
@@ -39,6 +39,9 @@ addButton.addEventListener("click", function() {
         newLi.appendChild(newH1);
         list.appendChild(newLi);
 
+        // newP border
+
+        newP.style.border = '2px dashed rgb(201, 155, 31)';
 
 
         // sorting list by priority level
@@ -84,7 +87,8 @@ addButton.addEventListener("click", function() {
 
             if (clickCount % 2 === 1) {
                 this.parentElement.parentElement.removeChild(this.parentElement);
-                newP.innerText = "Pozostało " + numberOfTasksLeft + " zadań do zrobienia";
+                newP.innerText = "Pozostały " + numberOfTasksLeft + " zadania do zrobienia";
+
             } else if (clickCount % 2 !== 1) {
                 this.parentElement.parentElement.removeChild(this.parentElement);
                 numberOfTasksLeft--;
@@ -95,11 +99,17 @@ addButton.addEventListener("click", function() {
         newButton2.addEventListener("click", function() {
             clickCount++;
             if (clickCount % 2 === 1) {
-                this.previousElementSibling.previousElementSibling.style.color = "red";
+                this.previousElementSibling.previousElementSibling.style.color = "rgb(117, 218, 86)";
+                this.style.backgroundColor = 'rgb(117, 218, 86)';
+                this.style.color = '#fff';
+
+
                 numberOfTasksLeft--;
                 newP.innerText = "Pozostało " + numberOfTasksLeft + " zadań do zrobienia";
             } else if (clickCount % 2 !== 1) {
-                this.previousElementSibling.previousElementSibling.style.color = "black";
+                this.previousElementSibling.previousElementSibling.style.color = "rgb(255, 255, 255)"
+                this.style.backgroundColor = 'rgb(255, 255, 255)';
+                this.style.color = 'rgb(79, 123, 153)';
                 numberOfTasksLeft++;
                 newP.innerText = "Pozostało " + numberOfTasksLeft + " zadań do zrobienia";
             }
@@ -117,7 +127,7 @@ addButton.addEventListener("click", function() {
 removeButton.addEventListener("click", function() {
     let toDelete = document.querySelectorAll("li");
     for (let i = 0; i < toDelete.length; i++) {
-        if (toDelete[i].firstElementChild.style.color === "red") {
+        if (toDelete[i].firstElementChild.style.color === "rgb(117, 218, 86)") {
             toDelete[i].parentElement.removeChild(toDelete[i]);
         }
     }

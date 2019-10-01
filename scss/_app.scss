@@ -1,123 +1,106 @@
-@media (max-width: 768px) {
-    section {
-        div {
-            background-color: $mainColor;
-            height: 100vh;
-            width: 100vw;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            input {
-                height: 1.5rem;
-                text-align: center;
-                width: 9rem;
-                &:nth-of-type(2) {
-                    height: 1.5rem;
-                    margin-bottom: 1.5rem;
-                    width: 9rem;
-                }
-            }
-            #addTaskButton {}
-            #taskList {
-                li {}
-            }
-            #removeFinishedTasksButton {}
+section {
+    div {
+        background-color: $mainColor;
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        h1 {
+            color: $colorWhite;
+            font-size: 2rem;
+            font-weight: 700;
+            text-transform: uppercase;
         }
-    }
-}
-
-@media (min-width: 769px) {
-    section {
-        div {
-            background-color: $mainColor;
-            height: 100vh;
-            width: 100vw;
+        input {
+            border-radius: $borderRadius;
+            color: $mainColor;
+            height: 2.2rem;
+            text-align: center;
+            width: 22rem;
+            &::placeholder {
+                color: $mainColor;
+            }
+            &:hover {
+                border: 1px solid $colorGreen;
+                font-weight: 700;
+            }
+            &:nth-of-type(2) {
+                height: 1.8rem;
+                margin-bottom: 2rem;
+                width: 7rem;
+            }
+        }
+        #addTaskButton {
+            background-color: $colorWhite;
+            border: 1px solid transparent;
+            border-radius: $borderRadius;
+            color: $mainColor;
+            font-weight: 700;
+            height: 2rem;
+            width: 6rem;
+            &:hover {
+                background-color: $mainColor;
+                border: 2px solid $colorWhite;
+                color: $colorWhite;
+            }
+        }
+        p {
+            color: $colorOrange;
+            display: block;
+            font-size: 1.5rem;
+            font-weight: 700;
+            padding: 0.5rem;
+            text-transform: uppercase;
+        }
+        #taskList {
             display: flex;
             flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            h1 {
-                color: $colorWhite;
-                font-size: 2rem;
-                font-weight: 700;
-                text-transform: uppercase;
-            }
-            input {
-                border-radius: $borderRadius;
-                color: $mainColor;
-                height: 2.2rem;
-                text-align: center;
-                width: 22rem;
-                &::placeholder {
+            li {
+                list-style-type: none;
+                width: 13rem;
+                h1 {
+                    color: $colorWhite;
+                    font-size: 1.5rem;
+                    margin-left: -0.15rem;
+                    text-align: left;
+                    text-transform: none;
+                }
+                button {
+                    background-color: $colorWhite;
+                    border: 1px solid transparent;
+                    border-radius: $borderRadius;
                     color: $mainColor;
-                }
-                &:hover {
-                    border: 1px solid $colorGreen;
                     font-weight: 700;
-                }
-                &:nth-of-type(2) {
-                    margin-bottom: 2rem;
-                    width: 7rem;
-                }
-            }
-            #addTaskButton {
-                background-color: $colorWhite;
-                border: 1px solid transparent;
-                border-radius: $borderRadius;
-                color: $mainColor;
-                font-weight: 700;
-                height: 2rem;
-                width: 6rem;
-                &:hover {
-                    background-color: $mainColor;
-                    border: 2px solid $colorWhite;
-                    color: $colorWhite;
-                }
-            }
-            #taskList {
-                display: flex;
-                flex-direction: column;
-                li {
-                    list-style-type: none;
-                    h1 {
+                    height: 1.5rem;
+                    margin-right: 0.25rem;
+                    width: 5rem;
+                    &:hover {
+                        background-color: $mainColor;
+                        border: 2px solid $colorWhite;
                         color: $colorWhite;
-                        font-size: 1rem;
-                        text-transform: none;
                     }
-                    button {
-                        background-color: $colorWhite;
-                        border: 1px solid transparent;
-                        border-radius: $borderRadius;
-                        color: $mainColor;
-                        font-weight: 700;
-                        height: 1.5rem;
-                        margin-right: 0.25rem;
-                        width: 5rem;
-                        &:hover {
-                            background-color: $mainColor;
-                            border: 2px solid $colorWhite;
-                            color: $colorWhite;
-                        }
-                        &:last-of-type {
-                            margin-right: 2.5rem;
-                        }
+                    &:last-of-type {
+                        margin-right: 2.5rem;
                     }
                 }
             }
-            #removeFinishedTasksButton {
-                background-color: $colorWhite;
-                border: 1px solid transparent;
-                border-radius: $borderRadius;
-                color: $mainColor;
-                font-weight: 700;
-                height: 2rem;
-                width: 11rem;
-                &:hover {
-                    background-color: $mainColor;
-                    border: 2px solid $colorWhite;
-                    color: $colorWhite;
-                }
+        }
+        #removeFinishedTasksButton {
+            background-color: $colorWhite;
+            border: 1px solid transparent;
+            border-radius: $borderRadius;
+            color: $mainColor;
+            font-weight: 700;
+            height: 2rem;
+            margin-bottom: 3rem;
+            margin-top: 1rem;
+            width: 12rem;
+            &:hover {
+                background-color: $mainColor;
+                border: 2px solid $colorWhite;
+                color: $colorWhite;
             }
         }
     }
