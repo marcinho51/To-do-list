@@ -1,20 +1,19 @@
-var taskInput = document.querySelector("#taskInput");
-var addButton = document.querySelector("#addTaskButton");
-var removeButton = document.querySelector("#removeFinishedTasksButton");
-var list = document.querySelector("#taskList");
-
-var div = document.querySelector("div");
-var newP = document.createElement("p");
+const taskInput = document.querySelector("#taskInput");
+const addButton = document.querySelector("#addTaskButton");
+const removeButton = document.querySelector("#removeFinishedTasksButton");
+const list = document.querySelector("#taskList");
+const div = document.querySelector("div");
+const newP = document.createElement("p");
 
 div.insertBefore(newP, list);
-var newInput = document.createElement("input");
+const newInput = document.createElement("input");
 div.insertBefore(newInput, addButton);
 newInput.placeholder = "Priority level";
 newInput.type = "number";
 
 // Number of tasks left counter
 
-var numberOfTasksLeft = 0;
+const numberOfTasksLeft = 0;
 
 // Add Task Button
 
@@ -44,13 +43,13 @@ addButton.addEventListener("click", function() {
 
         // sorting list by priority level
 
-        var allTasks = document.querySelectorAll("li");
-        var allTasksList = [];
+        let allTasks = document.querySelectorAll("li");
+        let allTasksList = [];
         for (let i = 0; i < allTasks.length; i++) {
             allTasksList.push(allTasks[i]);
         }
 
-        var sortedTasks = allTasksList.sort(function(a, b) {
+        let sortedTasks = allTasksList.sort(function(a, b) {
             return parseInt(b.firstElementChild.innerText, 10) - parseInt(a.firstElementChild.innerText, 10);
         });
 
@@ -79,7 +78,7 @@ addButton.addEventListener("click", function() {
 
         // Delete task and task completed buttons addEventListeners
 
-        var clickCount = 0;
+        let clickCount = 0;
 
         newButton1.addEventListener("click", function() {
 
@@ -116,7 +115,7 @@ addButton.addEventListener("click", function() {
 // Remove all completed tasks button
 
 removeButton.addEventListener("click", function() {
-    var toDelete = document.querySelectorAll("li");
+    let toDelete = document.querySelectorAll("li");
     for (let i = 0; i < toDelete.length; i++) {
         if (toDelete[i].firstElementChild.style.color === "red") {
             toDelete[i].parentElement.removeChild(toDelete[i]);

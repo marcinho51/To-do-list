@@ -79,9 +79,12 @@
                 display: flex;
                 flex-direction: column;
                 li {
-                    color: $colorWhite;
-                    font-size: 1rem;
                     list-style-type: none;
+                    h1 {
+                        color: $colorWhite;
+                        font-size: 1rem;
+                        text-transform: none;
+                    }
                     button {
                         background-color: $colorWhite;
                         border: 1px solid transparent;
