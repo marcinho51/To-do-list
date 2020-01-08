@@ -38,7 +38,7 @@ addButton.addEventListener("click", function() {
 
     newLi = document.createElement("li");
     newH1 = document.createElement("h1");
-    newH1.innerText = newInput.value + ": " + taskInput.value;
+    newH1.innerText = newInput.value + " priority level: " + taskInput.value;
     newLi.appendChild(newH1);
     list.appendChild(newLi);
 
