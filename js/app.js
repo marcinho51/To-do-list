@@ -88,13 +88,11 @@ addButton.addEventListener("click", function() {
     newButton1.addEventListener("click", function() {
       if (clickCount % 2 === 1) {
         this.parentElement.parentElement.removeChild(this.parentElement);
-        newP.innerText =
-          "Pozostały " + numberOfTasksLeft + " zadania do zrobienia";
+        newP.innerText = "You have " + numberOfTasksLeft + " tasks to do";
       } else if (clickCount % 2 !== 1) {
         this.parentElement.parentElement.removeChild(this.parentElement);
         numberOfTasksLeft--;
-        newP.innerText =
-          "Pozostało " + numberOfTasksLeft + " zadań do zrobienia";
+        newP.innerText = "You have " + numberOfTasksLeft + " tasks to do";
       }
     });
 
@@ -107,16 +105,14 @@ addButton.addEventListener("click", function() {
         this.style.color = "#fff";
 
         numberOfTasksLeft--;
-        newP.innerText =
-          "Pozostało " + numberOfTasksLeft + " zadań do zrobienia";
+        newP.innerText = "You have " + numberOfTasksLeft + " tasks to do";
       } else if (clickCount % 2 !== 1) {
         this.previousElementSibling.previousElementSibling.style.color =
           "rgb(255, 255, 255)";
         this.style.backgroundColor = "rgb(255, 255, 255)";
         this.style.color = "rgb(79, 123, 153)";
         numberOfTasksLeft++;
-        newP.innerText =
-          "Pozostało " + numberOfTasksLeft + " zadań do zrobienia";
+        newP.innerText = "You have " + numberOfTasksLeft + " tasks to do";
       }
     });
     taskInput.value = "";

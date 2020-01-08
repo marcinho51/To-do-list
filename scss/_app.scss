@@ -32,6 +32,11 @@ section {
         width: 17rem;
       }
     }
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
     #addTaskButton {
       background-color: $colorWhite;
       border: 1px solid transparent;
@@ -104,10 +109,4 @@ section {
       }
     }
   }
-}
-
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
 }
